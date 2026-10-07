@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير أداء الحملات الإعلانية واستراتيجية الخروج والتسليم | Clicklock × A to Z Agency</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(212, 175, 55, 0.35);
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+            --accent-blue: #38bdf8;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-orange: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 25px rgba(212, 175, 55, 0.15);
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8) 0%, transparent 100%);
+        }
+
+        .en-term {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: inline-block;
+            direction: ltr;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 30px 20px 80px;
+        }
+
+        /* Top Brand Header */
+        .header-bar {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 24px 32px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .logos-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box img {
+            height: 58px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .logo-divider {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+        }
+
+        .doc-meta {
+            text-align: left;
+            direction: ltr;
+        }
+
+        .doc-badge {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-light);
+            border: 1px solid var(--gold);
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .doc-date {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+
+        /* Hero Banner */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--gold-gradient);
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .hero-title span {
+            color: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 900px;
+            line-height: 1.7;
+        }
+
+        /* Navigation Tabs */
+        .tabs-nav {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 12px 22px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--gold);
+            background: var(--bg-card-hover);
+        }
+
+        .tab-btn.active {
+            background: var(--gold-gradient);
+            color: #000;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+        }
+
+        /* KPI Cards Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            position: relative;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            background: var(--bg-card-hover);
+        }
+
+        .kpi-title {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .kpi-value {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 6px;
+        }
+
+        .kpi-sub {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-green { color: var(--accent-green); font-weight: bold; }
+        .badge-red { color: var(--accent-red); font-weight: bold; }
+        .badge-gold { color: var(--gold); font-weight: bold; }
+        .badge-blue { color: var(--accent-blue); font-weight: bold; }
+
+        /* Content Sections */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.35s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Funnel Flow */
+        .funnel-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 25px 0;
+        }
+
+        .funnel-step {
+            display: grid;
+            grid-template-columns: 200px 1fr 140px;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .funnel-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .funnel-bar-bg {
+            background: rgba(255, 255, 255, 0.06);
+            height: 18px;
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .funnel-bar-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 1s ease-in-out;
+        }
+
+        .funnel-stat {
+            text-align: left;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            padding: 14px 16px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-gold);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-primary);
+        }
+
+        .text-gold { color: var(--gold); font-weight: 700; }
+        .text-white { color: #fff; font-weight: 600; }
+        .text-center { text-align: center; }
+
+        /* Alert / Callout Boxes */
+        .callout {
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin: 20px 0;
+            border-right: 5px solid;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .callout-warning {
+            border-color: var(--accent-orange);
+            background: rgba(245, 158, 11, 0.08);
+        }
+
+        .callout-danger {
+            border-color: var(--accent-red);
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        .callout-success {
+            border-color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.08);
+        }
+
+        .callout-title {
+            font-weight: 800;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* The 5 Strategic Solutions Grid */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 24px;
+            margin-top: 25px;
+        }
+
+        .solution-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.15);
+        }
+
+        .sol-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .sol-badge-1 { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .sol-badge-2 { background: rgba(245, 158, 11, 0.2); color: var(--accent-orange); }
+        .sol-badge-3 { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); }
+        .sol-badge-4 { background: rgba(239, 68, 68, 0.2); color: var(--accent-red); }
+        .sol-badge-5 { background: rgba(212, 175, 55, 0.2); color: var(--gold-light); }
+
+        .solution-card h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .solution-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .sol-steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sol-steps li {
+            position: relative;
+            padding-right: 22px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .sol-steps li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Roadmap Table Badges */
+        .tag-priority {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            display: inline-block;
+        }
+        .tag-p1 { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+        .tag-p2 { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+        .tag-p3 { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+
+        /* Action Buttons */
+        .btn-print {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+
+        .btn-print:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-bar { flex-direction: column; align-items: flex-start; }
+            .hero-title { font-size: 1.6rem; }
+            .funnel-step { grid-template-columns: 1fr; gap: 8px; }
+            .funnel-stat { text-align: right; }
+            .solutions-grid { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            body { background: #fff; color: #000; }
+            .header-bar, .card, .solution-card { border: 1px solid #ccc; box-shadow: none; background: #fff; color: #000; }
+            .tab-btn, .btn-print { display: none; }
+            .tab-content { display: block !important; }
+            .hero-title, .card-title, .solution-card h3 { color: #000; }
+            .kpi-value { color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Branding Header -->
+    <header class="header-bar">
+        <div class="logos-wrapper">
+            <div class="logo-box">
+                <img src="atoz_agency_logo.png" alt="A to Z Advertising Agency Logo" title="A to Z Agency">
+            </div>
+            <div class="logo-divider"></div>
+            <div class="logo-box">
+                <img src="clicklock_logo.webp" alt="Clicklock Logo" title="Clicklock.sa">
+            </div>
+        </div>
+        <div class="doc-meta">
+            <div class="doc-badge">OFFICIAL AGENCY EXIT REPORT</div>
+            <div class="doc-date">September 2026 Campaigns • Handover Strategy</div>
+            <div style="margin-top: 8px;">
+                <button class="btn-print" onclick="window.print()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg> طباعة التقرير / PDF</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-section">
+        <h1 class="hero-title">تقرير أداء الحملات الإعلانية و<span>استراتيجية الخروج والتسليم</span></h1>
+        <p class="hero-subtitle">
+            وثيقة التحليل الشامل لأداء حملات متجر <strong>Clicklock.sa</strong> لشهر سبتمبر 2026 الصادرة من وكالة <strong>A to Z Advertising Agency</strong>. نضع بين أيديكم خلاصة ما تم اختباره، وتشخيص أسباب انقطاع مسار الشراء (Funnel Drop-off)، وخارطة الحلول الاستراتيجية الخمسة لنقل المتجر إلى مرحلة المبيعات المستدامة.
+        </p>
+    </section>
+
+    <!-- Top KPIs Row -->
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-title">
+                <span>إجمالي الصرف الإعلاني</span>
+                <span class="en-term">Total Ad Spend</span>
+            </div>
+            <div class="kpi-value">3,294.60 <span style="font-size: 1rem; color: var(--gold);">ر.س</span></div>
+            <div class="kpi-sub">
+                <span>تيك توك: 2,109 ر.س | سناب: 1,185 ر.س</span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-title">
+                <span>زيارات الموقع الكلية</span>
+                <span class="en-term">Total Page Views</span>
+            </div>
+            <div class="kpi-value">6,235</div>
+            <div class="kpi-sub">
+                <span class="badge-green">↑ تفاعل نوعي ممتاز</span>
+                <span>(6,621 تصفح منتجات)</span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-title">
+                <span>تكلفة النقرة (سناب شات)</span>
+                <span class="en-term">Snapchat eCPC</span>
+            </div>
+            <div class="kpi-value">0.39 <span style="font-size: 1rem; color: var(--accent-green);">ر.س</span></div>
+            <div class="kpi-sub">
+                <span class="badge-green">39 هللة فقط</span>
+                <span>(3,067 سحبة شاشة)</span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-title">
+                <span>السلات وبدء الدفع</span>
+                <span class="en-term">ATC & Checkouts</span>
+            </div>
+            <div class="kpi-value">49 / 46</div>
+            <div class="kpi-sub">
+                <span class="badge-gold">46 محاولة دفع</span>
+                <span>بتكلفة 71.62 ر.س للعملية</span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-title">
+                <span>المبيعات المحققة</span>
+                <span class="en-term">Purchases & ROAS</span>
+            </div>
+            <div class="kpi-value" style="color: var(--accent-red);">0 <span style="font-size: 1rem; color: var(--accent-red);">طلب</span></div>
+            <div class="kpi-sub">
+                <span class="badge-red">تسرب 100% في صفحة الدفع</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab(0, this)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> لوحة التحليل ومسار التحويل</button>
+        <button class="tab-btn" onclick="switchTab(1, this)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> إيش اختبرنا وجربناه؟ (What Worked)</button>
+        <button class="tab-btn" onclick="switchTab(2, this)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> وش المشاكل ونقاط الاختناق؟ (Bottlenecks)</button>
+        <button class="tab-btn" onclick="switchTab(3, this)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="9" y1="18" x2="15" y2="18"></line><line x1="10" y1="22" x2="14" y2="22"></line><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg> الحلول وخطة الخروج (Exit Strategy)</button>
+        <button class="tab-btn" onclick="switchTab(4, this)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg> مصفوفة التسليم للأيام الـ 30 (Roadmap)</button>
+        <button class="tab-btn" onclick="switchTab(5, this)" style="border: 1px solid var(--gold); color: var(--gold-light);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> حزمة البراند براين وملفات التسليم (Handover Assets)</button>
+    </nav>
+
+    <!-- Tab 0: Dashboard & Funnel -->
+    <div class="tab-content active" id="tab-0">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">تفكيك مسار التحويل الإعلاني (Full Funnel Breakdown)</h2>
+                <span class="en-term" style="color: var(--text-muted);">Conversion Anatomy</span>
+            </div>
+
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                يوضح المخطط أدناه كيف نجحت الحملات الإعلانية في دفع الزوار بكفاءة عبر الطبقات الثلاث الأولى، وأين حدث الانقطاع الصادم الذي أوقف المبيعات تماماً:
+            </p>
+
+            <div class="funnel-container">
+                <div class="funnel-step">
+                    <div class="funnel-label">1. الوصول والظهور (Impressions)</div>
+                    <div class="funnel-bar-bg">
+                        <div class="funnel-bar-fill" style="width: 100%; background: var(--accent-blue);"></div>
+                    </div>
+                    <div class="funnel-stat" style="color: var(--accent-blue);">> 180,000+</div>
+                </div>
+
+                <div class="funnel-step">
+                    <div class="funnel-label">2. الترافيك وزيارات المتجر (Page Views)</div>
+                    <div class="funnel-bar-bg">
+                        <div class="funnel-bar-fill" style="width: 65%; background: #38bdf8;"></div>
+                    </div>
+                    <div class="funnel-stat" style="color: #38bdf8;">6,235 زيارة</div>
+                </div>
+
+                <div class="funnel-step">
+                    <div class="funnel-label">3. تصفح تفاصيل الشنط (Content Views)</div>
+                    <div class="funnel-bar-bg">
+                        <div class="funnel-bar-fill" style="width: 68%; background: #60a5fa;"></div>
+                    </div>
+                    <div class="funnel-stat" style="color: #60a5fa;">6,621 تصفح</div>
+                </div>
+
+                <div class="funnel-step">
+                    <div class="funnel-label">4. الإضافة إلى السلة (Add to Cart)</div>
+                    <div class="funnel-bar-bg">
+                        <div class="funnel-bar-fill" style="width: 25%; background: var(--gold);"></div>
+                    </div>
+                    <div class="funnel-stat" style="color: var(--gold);">49 سلة</div>
+                </div>
+
+                <div class="funnel-step">
+                    <div class="funnel-label">5. بدء إجراءات الدفع (Checkouts)</div>
+                    <div class="funnel-bar-bg">
+                        <div class="funnel-bar-fill" style="width: 23%; background: var(--accent-orange);"></div>
+                    </div>
+                    <div class="funnel-stat" style="color: var(--accent-orange);">46 محاولة</div>
+                </div>
+
+                <div class="funnel-step" style="border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.04);">
+                    <div class="funnel-label" style="color: var(--accent-red);">6. إتمام الشراء الفعلي (Purchases)</div>
+                    <div class="funnel-bar-bg">
+                        <div class="funnel-bar-fill" style="width: 0%; background: var(--accent-red);"></div>
+                    </div>
+                    <div class="funnel-stat" style="color: var(--accent-red);">0 طلب (100% تسرب)</div>
+                </div>
+            </div>
+
+            <div class="callout callout-warning">
+                <div class="callout-title" style="color: var(--accent-orange);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg> قراءة تحليلية في الأرقام:</div>
+                <p style="font-size: 0.95rem; color: #cbd5e1;">
+                    النسبة الطبيعية في السوق السعودي لانتقال العملاء من <strong>بدء الدفع (Checkout)</strong> إلى <strong>الشراء المكتمل (Purchase)</strong> تتراوح بين 35% إلى 55%. وصول <strong>46 عميلة</strong> إلى صفحة الدفع دون أن تكمل أي منهن العملية يعني وجود <strong>حاجز مقاومة حاسم (Friction Wall)</strong> حدث لحظة إدخال البطاقة أو مراجعة السعر الإجمالي النهائي في سلة، وليس خللاً في جلب الزوار المهتمين من الإعلانات.
+                </p>
+            </div>
+        </div>
+
+        <!-- Consolidated Comparison Table -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">مقارنة أداء القنوات الإعلانية (Platform Metrics Benchmark)</h2>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المقياس التحليلي (Metric)</th>
+                            <th>تيك توك (TikTok Ads)</th>
+                            <th>سناب شات (Snapchat Ads)</th>
+                            <th>المجموع الكلي (Combined)</th>
+                            <th>التقييم التشغيلي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-white">الميزانية المصروفة (Ad Spend)</td>
+                            <td>2,109.36 ر.س</td>
+                            <td>1,185.24 ر.س</td>
+                            <td class="text-gold">3,294.60 ر.س</td>
+                            <td>ضمن حدود الميزانية المعتمدة</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">زيارات صفحات الموقع (Page Views)</td>
+                            <td>2,273 زيارة</td>
+                            <td>3,962 زيارة</td>
+                            <td class="text-gold">6,235 زيارة</td>
+                            <td>حجم مرور ممتاز للاختبار الأولي</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">تكلفة جلب الزيارة (Cost Per Visit)</td>
+                            <td>0.93 ر.س</td>
+                            <td>0.30 ر.س</td>
+                            <td class="text-gold">~0.53 ر.س</td>
+                            <td>تكلفة ترافيك رخيصة جداً بسناب</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">تصفح المنتجات (Content Views)</td>
+                            <td>2,905 تصفح</td>
+                            <td>3,716 تصفح</td>
+                            <td class="text-gold">6,621 تصفح</td>
+                            <td>اهتمام عالي بتفاصيل القطع</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">الإضافة إلى السلة (Add to Cart)</td>
+                            <td>37 إضافة (57.01 ر.س/سلة)</td>
+                            <td>12 إضافة (98.77 ر.س/سلة)</td>
+                            <td class="text-gold">49 سلة تسوق</td>
+                            <td>تيك توك أعلى في الإضافة للسلة</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">بدء إجراءات الدفع (Checkouts Initiated)</td>
+                            <td>28 محاولة (75.33 ر.س)</td>
+                            <td>18 محاولة (65.85 ر.س)</td>
+                            <td class="text-gold">46 محاولة دفع</td>
+                            <td>سناب شات الأقل تكلفة لكل بدء دفع</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">معدل التحويل النهائي (Conversion Rate)</td>
+                            <td>0.00%</td>
+                            <td>0.00%</td>
+                            <td class="badge-red">0.00%</td>
+                            <td>يتطلب تطبيق حلول الموقع فورا</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 1: What Worked -->
+    <div class="tab-content" id="tab-1">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">إيش اللي جربناه واختبرناه بنجاح؟ (What Worked)</h2>
+            </div>
+            
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">
+                قامت وكالة A to Z Agency خلال سبتمبر باختبار وتجربة زوايا متعددة في الاستهداف والمواد الإعلانية، وهذه أبرز العناصر الرابحة التي أثبتت فعاليتها بالأرقام:
+            </p>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-1">الزاوية الرابحة الأولى</span>
+                    <h3>زاوية "التسليم الفوري خلال 48 ساعة داخل المملكة"</h3>
+                    <p>
+                        حملة الكتالوج المعنونة <strong>(تسليم فوري داخل السعودية CATALOG)</strong> على تيك توك كانت الحصان الأسود للحملات؛ جلبت وحدها <strong>18 إضافة للسلة و 13 محاولة بدء دفع</strong> بإنفاق 697.99 ريال.
+                    </p>
+                    <ul class="sol-steps">
+                        <li>العميلة السعودية تكره انتظار شحن الصين (15-30 يوم).</li>
+                        <li>إبراز توفر المخزون بالمستودع المحلي هو أقوى محرك للنقر.</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-2">المنتج الأكثر طلباً</span>
+                    <h3>حقيبة Chanel 25 وحقائب Hermès و Multipass</h3>
+                    <p>
+                        أثبتت هذه الحقائب الثلاث أنها قاطرة الجذب للمتجر. حقيبة شانيل 25 جلبت وحدها <strong>804 زيارات و 12 سلة تسوق</strong>، بينما حققت هيرمز ومولتي باس 11 محاولة بدء دفع مجتمعة.
+                    </p>
+                    <ul class="sol-steps">
+                        <li>منتجات "الهبة" المرغوبة بشدة تصنع أعلى تفاعل.</li>
+                        <li>الفيديو الاستعراضي لتفاصيل الجلد والهاردوير حقق مشاهدات عالية.</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-3">كفاءة المنصة</span>
+                    <h3>ماكينة ترافيك سناب شات (39 هللة للنقرة)</h3>
+                    <p>
+                        حملة الكتالوج الديناميكي في المدن المختارة (الرياض، الشرقية، جدة) على سناب شات حصدت <strong>2,937 نقرة بسعر 26 هللة للنقرة الواحدة</strong>، وأدخلت 3,700 زيارة لصفحات المنتجات.
+                    </p>
+                    <ul class="sol-steps">
+                        <li>سناب شات في السعودية لا يزال القناة الأرخص لجلب حركة المرور.</li>
+                        <li>الاستهداف النسائي 22-37 سنة في المدن الكبرى أعطى جودة جمهور متوافقة تماماً.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Detailed creatives table -->
+            <div style="margin-top: 35px;">
+                <h3 style="color: var(--gold-light); margin-bottom: 16px;">جدول أداء المواد الإعلانية في تيك توك (Creatives Performance)</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>اسم الإعلان والمفهوم</th>
+                                <th>نوع المادة</th>
+                                <th>الإنفاق</th>
+                                <th>مشاهدات الصفحة</th>
+                                <th>السلات (ATC)</th>
+                                <th>بدء الدفع (Checkout)</th>
+                                <th>التوصية والتقييم</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-white">تسليم فوري داخل السعودية CATALOG</td>
+                                <td>كتالوج DPA تفاعلي</td>
+                                <td>697.99 ر.س</td>
+                                <td>626</td>
+                                <td class="text-gold">18</td>
+                                <td class="text-gold">13</td>
+                                <td><span class="badge-green">الأعلى كفاءة في التحويل الأولي</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">حقيبة Chanel 25</td>
+                                <td>فيديو تفاصيل الشنطة</td>
+                                <td>660.54 ر.س</td>
+                                <td class="text-gold">804</td>
+                                <td>12</td>
+                                <td>4</td>
+                                <td>جذب زيارات ضخم (السعر أوقف الإكمال)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">HERMAS (إيرمز)</td>
+                                <td>فيديو استعراض فخامة</td>
+                                <td>405.80 ر.س</td>
+                                <td>548</td>
+                                <td>2</td>
+                                <td class="text-gold">6</td>
+                                <td>نسبة تحويل ممتازة إلى بدء دفع</td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">Multipass (لوي فيتون)</td>
+                                <td>فيديو استخدام عملي</td>
+                                <td>199.40 ر.س</td>
+                                <td>217</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>معدل وصول للدفع ممتاز (1/40 ر.س)</td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">car video (فيديو السيارة)</td>
+                                <td>فيديو لايف ستايل</td>
+                                <td>145.63 ر.س</td>
+                                <td>78</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td><span class="badge-red">مفهوم ضعيف تم إيقافه فوراً</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 2: Problems & Bottlenecks -->
+    <div class="tab-content" id="tab-2">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">وش المشاكل ونقاط الاختناق التي واجهتنا؟ (The Bottlenecks)</h2>
+            </div>
+
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">
+                من خلال مراقبة مسار العميلة بعد النقر على الإعلان (User Journey) وتحليل البيانات، تم تحديد 5 نقاط اختناق جوهرية في الموقع والعمليات أدت إلى تعطل التحويل:
+            </p>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" style="color: var(--accent-red);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ef4444" style="vertical-align: middle; margin-left: 6px;"><circle cx="12" cy="12" r="10"></circle></svg> 1. ضعف واجهة المتجر الرئيسية (Home Page Hero Section):</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    واجهة الهيرو الحالية لا تعطي إحساس الفخامة الآمنة ولا تجيب على السؤال الأول للعميلة السعودية: <em>"وش يضمن لي أن الشنطة ماستر كواليتي حقيقية ومب مقلدة رديئة؟"</em>. عدم وجود شعارات الثقة الصريحة، غياب بادج تمارا في أول ثانية، وعدم وضوح ضمان المعاينة قبل الاستلام في واجهة الموقع ينفر العميلة ويشعرها بالمقامرة.
+                </p>
+            </div>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" style="color: var(--accent-red);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ef4444" style="vertical-align: middle; margin-left: 6px;"><circle cx="12" cy="12" r="10"></circle></svg> 2. معضلة التسعير والحاجز النفسي (Pricing Resistance & Friction):</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    46 عميلة وصلن إلى شاشة الدفع ثم ألغين الطلب! السبب المباشر هو "الحاجز النفسي للتجربة الأولى". عند وصولها للدفع ورؤية المبلغ الإجمالي (مثلاً 900 - 1,200 ريال) بدون أي كود خصم للطلب الأول أو حافز شحن مجاني أو إبراز لتوفير 90% مقارنة بسعر البوتيك، يتولد تردد حاسم يسمى في السوق السعودي <strong>"فوبيا الافتضاح"</strong> المقرونة بالخوف من ضياع المال، فتغادر السلة.
+                </p>
+            </div>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" style="color: var(--accent-red);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ef4444" style="vertical-align: middle; margin-left: 6px;"><circle cx="12" cy="12" r="10"></circle></svg> 3. غياب الدليل الاجتماعي والمؤثرين (Lack of Influencer / UGC Proof):</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    في منتجات الماستر كواليتي (1:1)، لا تشتري المرأة السعودية بناءً على صورة استوديو صامتة! تحتاج لرؤية فتاة سعودية مثلها تفتح الصندوق (Unboxing)، تقرّب الكاميرا من خياطة الجلد، توضح وزن السلسلة، وتريها تفاصيل البطاقة والدست باج. غياب فيديوهات المؤثرات جعل المتجر يبدو كأنه صفحة مجهولة لا تملك رصيد ثقة.
+                </p>
+            </div>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" style="color: var(--accent-red);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ef4444" style="vertical-align: middle; margin-left: 6px;"><circle cx="12" cy="12" r="10"></circle></svg> 4. حظر وتعطيل إعلانات ميتا (Meta Ads & Catalog Policy Block):</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    لم تتمكن الوكالة من تشغيل إعلانات إنستجرام وفيسبوك (Meta) وهي المنصة رقم 1 عالمياً في تحويل الأزياء النسائية وإعادة استهداف زوار السلة! <strong>سبب المشكلة:</strong> فحص ميتا الآلي يرفض روابط الكتالوج والنطاق التي تحتوي على أسماء الماركات العالمية المحمية (مثل Chanel, Dior, LV, Hermes) بدعوى انتهاك العلامات التجارية (Counterfeit / Trademark Infringement).
+                </p>
+            </div>
+
+            <div class="callout callout-danger">
+                <div class="callout-title" style="color: var(--accent-red);"><svg width="12" height="12" viewBox="0 0 24 24" fill="#ef4444" style="vertical-align: middle; margin-left: 6px;"><circle cx="12" cy="12" r="10"></circle></svg> 5. تشتت صور المنتجات وغياب صور الموديلز (Product Photography & Scale):</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    خلفيات صور المنتجات في المتجر غير موحدة وتظهر بإضاءات متعددة توحي بأنها صور مجمعة من مصادر مختلفة. والأخطر من ذلك: <strong>انعدام وجود صور لعارضات (On-Model Shots)</strong>؛ العميلة لا تستطيع تخيل مقاس الشنطة على الجسم (هل هي صغيرة للمناسبات أم كبيرة للعمل؟)، مما يعيق قرار الشراء النهائي.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 3: Solutions & Exit Handover -->
+    <div class="tab-content" id="tab-3">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">استراتيجية الخروج والحلول الخمسة للتسليم (Agency Handover Blueprint)</h2>
+            </div>
+
+            <p style="color: var(--text-secondary); margin-bottom: 25px;">
+                كوكالة <strong>A to Z Advertising Agency</strong>، نختتم مرحلة إدارتنا بتقديم <strong>خارطة الطريق التصحيحية الإلزامية الخمسة</strong> التي تمثل جوهر نجاح المتجر فور استلامه:
+            </p>
+
+            <div class="solutions-grid">
+                <!-- Solution 1 -->
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-1">الحل الأول • واجهة الموقع</span>
+                    <h3>1. تطوير الـ Hero Section للموقع الرئيسي</h3>
+                    <p>
+                        تحويل واجهة الهيرو إلى درع ثقة فاخر يحسم الشكوك خلال أول 3 ثوانٍ من دخول الزائرة:
+                    </p>
+                    <ul class="sol-steps">
+                        <li><strong>العنوان المقترح:</strong> "فخامة الماركات العالمية بين يديك.. جودة متقنة 1:1 وتوصيل فوري خلال 48 ساعة".</li>
+                        <li><strong>بار الضمانات الأربعة:</strong> معاينة قبل الاستلام • توصيل سريع 48 ساعة • تقسيط معتمد مع تمارا 4 دفعات • تغليف البوتيك الكامل.</li>
+                        <li><strong>زر الشراء الرئيسي (CTA):</strong> [ تصفحي تشكيلة التسليم الفوري الآن ] يوجه مباشرة لقسم المنتجات الجاهزة للشحن بالرياض.</li>
+                    </ul>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-2">الحل الثاني • الهندسة المالية</span>
+                    <h3>2. مراجعة وتعديل استراتيجية التسعير</h3>
+                    <p>
+                        تفكيك المقاومة السعرية عند صفحة الدفع (Checkouts) وتحويل الـ 46 محاولة إلى مبيعات:
+                    </p>
+                    <ul class="sol-steps">
+                        <li><strong>حافز الطلب الأول:</strong> تفعيل كود خصم فوري (FIRST10) بخصم 10% أو شحن مجاني لأول طلب في شريط علوي مثبت.</li>
+                        <li><strong>مقارنة السعر النفسي (Price Anchor):</strong> كتابة سعر البوتيك الأصلي مشطوباً مقارنة بسعر كليك لوك لإبراز التوفير الذكي.</li>
+                        <li><strong>عروض البكجات (Bundles):</strong> تقديم عرض "حقيبة + محفظة كروت هدية" لرفع قيمة الطلب (AOV) وكسر حاجز التردد.</li>
+                    </ul>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-3">الحل الثالث • بناء الثقة</span>
+                    <h3>3. التعاقد مع المؤثرين (Influencers Collab)</h3>
+                    <p>
+                        بناء الدليل الاجتماعي الموثوق عبر أحد المسارين التاليين لكسر فوبيا الافتضاح:
+                    </p>
+                    <ul class="sol-steps">
+                        <li><strong>المسار (أ) الموصى به: 3 مايكرو إنفلونسرز (Micro):</strong> فتيات سعوديات مهتمات بالأزياء (25k-70k متابع)؛ تفاعل حقيقي وتكلفة منخفضة ومصداقية عفوية.</li>
+                        <li><strong>المسار (ب): 1 بيغ إنفلونسر (Big Tier-1):</strong> فاشينيستا كبرى في الخليج تمنح المتجر هالة فورية من الوجاهة الاجتماعية.</li>
+                        <li><strong>شرط المحتوى:</strong> تصوير Unboxing واقعي يبرز ملمس الجلد، قفل الشنطة وصوت الكليك، والبوكس والملحقات.</li>
+                    </ul>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-4">الحل الرابع • التقنية والإعلانات</span>
+                    <h3>4. الكتالوج النظيف لتشغيل إعلانات ميتا (Meta Ads)</h3>
+                    <p>
+                        الحل التقني الجذري لتشغيل إعلانات إنستجرام وفيسبوك وإعادة الاستهداف دون خطر الإيقاف:
+                    </p>
+                    <ul class="sol-steps">
+                        <li><strong>إنشاء فيد كتالوج مخصص ونظيف:</strong> عزل روابط الكتالوج الموجه لميتا تماماً عن الكلمات المحظورة.</li>
+                        <li><strong>تطهير الروابط (URL Cleansing):</strong> عدم وضع أسماء البراندات الأصلية (Chanel, Dior) داخل الـ Slug أو الروابط.</li>
+                        <li><strong>مسميات فاخرة بديلة:</strong> استخدام "حقيبة كتف كلاسيكية مبطنة بجلد الكافيار" بدلاً من اسم البراند لتفادي الذكاء الاصطناعي لميتا.</li>
+                        <li>تفعيل حملات Advantage+ Catalog وإعادة استهداف زوار السلة فوراً.</li>
+                    </ul>
+                </div>
+
+                <!-- Solution 5 -->
+                <div class="solution-card">
+                    <span class="sol-badge sol-badge-5">الحل الخامس • الهوية البصرية</span>
+                    <h3>5. توحيد خلفيات المنتجات وإلزامية صور الموديل</h3>
+                    <p>
+                        رفع موثوقية المتجر ومساعدة العميلة على اتخاذ قرار الشراء بثقة تامة:
+                    </p>
+                    <ul class="sol-steps">
+                        <li><strong>توحيد خلفيات الموقع بالكامل:</strong> اعتماد خلفية استوديو واحدة موحدة (Warm Minimalist Neutral) لكل صور الكتالوج.</li>
+                        <li><strong>إلزامية صورة عارضة لكل منتج (On-Model Shot):</strong> إضافة صورة واحدة على الأقل لفتاة تحمل الشنطة لكل منتج بلا استثناء.</li>
+                        <li><strong>إبراز المقاس والتنسيق:</strong> توضيح حجم الحقيبة الفعلي مقارنة بالجسم وطريقة تنسيقها مع العباءة أو الملابس.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 4: 30-Day Handover Roadmap -->
+    <div class="tab-content" id="tab-4">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">مصفوفة تسليم المهام وخريطة الـ 30 يوماً القادمة (Handover Roadmap)</h2>
+                <span class="en-term" style="color: var(--text-muted);">Action Matrix</span>
+            </div>
+
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                جدول الأولويات التنفيذية المنظم بحسب درجة الأثر والجهد لضمان انتقال سلس وتشغيل سريع:
+            </p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الأولوية</th>
+                            <th>المبادرة التنفيذية</th>
+                            <th>مستوى الأثر</th>
+                            <th>الجهد المطلوب</th>
+                            <th>المدى الزمني</th>
+                            <th>المسؤول المقترح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="tag-priority tag-p1">أولوية 1</span></td>
+                            <td class="text-white"><strong>تعديل الـ Hero Section وإضافة بار الثقة والشحن وتمارا</strong></td>
+                            <td><span class="badge-green">عالي جداً (High)</span></td>
+                            <td>منخفض (2-3 ساعات)</td>
+                            <td>خلال 48 ساعة</td>
+                            <td>مطور ثيم سلة / المصمم</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag-priority tag-p1">أولوية 2</span></td>
+                            <td class="text-white"><strong>تجهيز فيد الكتالوج النظيف وإطلاق إعلانات ميتا (Instagram)</strong></td>
+                            <td><span class="badge-green">عالي جداً (High)</span></td>
+                            <td>متوسط (يومان عمل)</td>
+                            <td>الأسبوع الأول</td>
+                            <td>مسؤول الحملات الإعلانية</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag-priority tag-p2">أولوية 3</span></td>
+                            <td class="text-white"><strong>تفعيل كود خصم أول طلب (FIRST10) وبكجات التوفير للشنط</strong></td>
+                            <td><span class="badge-gold">عالي (High)</span></td>
+                            <td>منخفض (فوري)</td>
+                            <td>خلال 24 ساعة</td>
+                            <td>مدير المتجر التجاري</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag-priority tag-p2">أولوية 4</span></td>
+                            <td class="text-white"><strong>جلسة تصوير الموديل (On-Model Shots) وتوحيد خلفيات الكتالوج</strong></td>
+                            <td><span class="badge-green">عالي جداً (High)</span></td>
+                            <td>متوسط (3-5 أيام)</td>
+                            <td>الأسبوع الثاني</td>
+                            <td>فريق المحتوى والتصوير</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag-priority tag-p3">أولوية 5</span></td>
+                            <td class="text-white"><strong>التعاقد مع 3 مايكرو إنفلونسرز وإطلاق فيديوهات الـ Unboxing</strong></td>
+                            <td><span class="badge-green">عالي جداً (High)</span></td>
+                            <td>متوسط (أسبوع إلى 10 أيام)</td>
+                            <td>الأسبوع 2 و 3</td>
+                            <td>العلاقات العامة / المؤثرين</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout callout-success" style="margin-top: 30px;">
+                <div class="callout-title" style="color: var(--accent-green);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.8-3.8a2 2 0 0 0-2.8 0L11 11.5"></path><path d="M2 13h4.5a2 2 0 0 0 1.4-.6L10 10"></path><path d="m5 16 3-3"></path><path d="m14 10-1.5-1.5a2 2 0 0 0-2.8 0L7 11.2"></path></svg> كلمة ختامية من وكالة A to Z Agency:</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    نسلمكم اليوم حساباتكم الإعلانية وتقاريرنا برؤية رقمية واضحة ومبنية على أرض الواقع. متجر <strong>Clicklock</strong> يملك كافة مقومات النجاح في سوق ضخم يتجاوز مئات الملايين سنوياً في السعودية. الزيارات الرخيصة واهتمام العميلات أثبتته الحملات؛ وتنفيذ التعديلات الخمسة أعلاه هو الجسر الوحيد المتبقي لتحويل المتجر إلى مشروع استثماري عالي العائد. نتمنى لكم دوام التوفيق والنجاح!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 5: Brand Brain & Handover Assets -->
+    <div class="tab-content" id="tab-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> حزمة تسليم البراند براين وملفات التشغيل الفوري (Brand Brain & Handover Assets)</h2>
+                <span class="en-term" style="color: var(--text-muted);">Turnkey Handover Package</span>
+            </div>
+
+            <p style="color: var(--text-secondary); margin-bottom: 25px; line-height: 1.8;">
+                حرصاً من وكالة <strong>A to Z Advertising Agency</strong> على استمرارية العمل بدون أي توقف، جمعنا للفريق القادم أو الإدارة الداخلية كافة الأصول الرقمية، ملفات البيانات الخام، هيكل <strong>Brand Brain</strong> المكون من 17 مجلداً و 84 ملفاً موثقاً، بالإضافة إلى الأدلة الإجرائية المعيارية (<span class="en-term">SOPs</span>) لتمكين الفريق الجديد من مباشرة العمل وتحقيق النتائج فوراً.
+            </p>
+
+            <!-- Section 1: Raw Data & Operational Files -->
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--gold-light); font-size: 1.25rem; margin-bottom: 16px; border-right: 4px solid var(--gold); padding-right: 12px;">
+                    1. الملفات التشغيلية والبيانات الإعلانية الخام (Raw Reports & Operational Assets)
+                </h3>
+                
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <span class="sol-badge sol-badge-1">ملف إكسل خام • تيك توك</span>
+                        <h3>تقرير حملات تيك توك سبتمبر 2026</h3>
+                        <p>ملف الإكسل الأصلي للحملة الشاملة متضمناً تفاصيل كل مجموعة إعلانية وكل فيديو وكلفة الزيارة والسلات وبدء الدفع يومياً.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="Tiktok Ads_a2z report sep26_Clicklock.sa_20260901-20260930.xlsx" class="btn-print" style="display: inline-block; text-decoration: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> فتح ملف إكسل تيك توك</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <span class="sol-badge sol-badge-2">ملف إكسل خام • سناب شات</span>
+                        <h3>تقرير حملات سناب شات سبتمبر 2026</h3>
+                        <p>البيانات التفصيلية لحملات اليوم الوطني والكتالوج في المدن المختارة (79 ألف ظهور و 2,937 نقرة بسعر 26 هللة).</p>
+                        <div style="margin-top: 15px;">
+                            <a href="e06139e2-ffa7-4635-8057-6660fb89bde2_unknown_2026-10-07T01_13_32.57009076Z.xlsx" class="btn-print" style="display: inline-block; text-decoration: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> فتح ملف إكسل سناب شات</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <span class="sol-badge sol-badge-3">دراسة تسويقية • Word</span>
+                        <h3>تحليل منافسين متجر Clicklock السعودي</h3>
+                        <p>الدراسة المعمقة لمنافسي الماستر كواليتي في السعودية (سمايا، برانداتي)، لوحة مسكنات الآلام، وفوبيا الافتضاح، وتوزيع الميزانيات.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="تحليل منافسين متجر Clicklock السعودي.docx" class="btn-print" style="display: inline-block; text-decoration: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> فتح دراسة المنافسين (.docx)</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <span class="sol-badge sol-badge-4">دليل الهوية • PDF</span>
+                        <h3>براند بوك وملف الهوية (Clicklock.pdf)</h3>
+                        <p>ملف الهوية البصرية الفاخرة لـ Clicklock، ألوان البراند، فلسفة الشعار المونوغرام المتداخل، ونبرة الصوت المعتمدة.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="Clicklock .pdf" class="btn-print" style="display: inline-block; text-decoration: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> فتح ملف الهوية الرسمية (PDF)</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-card">
+                        <span class="sol-badge sol-badge-5">حزمة الشعارات • High Res</span>
+                        <h3>شعارات المتجر والوكالة بدقة عالية</h3>
+                        <p>أصول الشعارات بصيغ PNG الشفافة و WebP الجاهزة لاستخدامها في بنرات المتجر والإعلانات.</p>
+                        <ul class="sol-steps" style="margin-top: 10px;">
+                            <li><a href="CLICKLOCK logo.png.png" style="color: var(--accent-blue);">شعار كليك لوك الأساسي (PNG)</a></li>
+                            <li><a href="CLICKLOCK logo2.png.png" style="color: var(--accent-blue);">شعار كليك لوك البديل 2</a></li>
+                            <li><a href="CLICKLOCK logo3.png.png" style="color: var(--accent-blue);">شعار كليك لوك البديل 3</a></li>
+                            <li><a href="atoz_agency_logo.png" style="color: var(--gold);">شعار وكالة A to Z Agency</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="solution-card">
+                        <span class="sol-badge sol-badge-1">تقرير الأداء التوثيقي • MD</span>
+                        <h3>الوثيقة المرجعية الرسمية (Markdown)</h3>
+                        <p>الملف التوثيقي المرجعي الكامل متضمناً الجداول، ومخططات الـ Mermaid، والتشخيص الإداري للمشروع.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="clicklock_performance_report_and_exit_strategy.md" class="btn-print" style="display: inline-block; text-decoration: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> فتح وثيقة الماركداون</a>
+                        </div>
+                    </div>
+                                    <div class="solution-card" style="border: 1px solid var(--gold);">
+                        <span class="sol-badge sol-badge-5">عرض بوربوينت • PPTX</span>
+                        <h3>العرض التقديمي الشامل لتسليم المتجر</h3>
+                        <p>ملف PowerPoint كامل (15 شريحة) بالثيم التحريري الفاخر يتضمن مؤشرات الأداء، تفكيك الـ Funnel، والـ SOPs التشغيلية.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="Clicklock_Ad_Performance_and_Handover_Strategy.pptx" class="btn-print" style="display: inline-block; text-decoration: none;">📊 فتح عرض البوربوينت (.pptx)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Complete Brand Brain Architecture -->
+            <div style="margin-bottom: 40px;">
+                <h3 style="color: var(--gold-light); font-size: 1.25rem; margin-bottom: 16px; border-right: 4px solid var(--gold); padding-right: 12px;">
+                    2. خريطة مجلدات الـ Brand Brain الكاملة (17 مجلداً و 84 ملفاً استراتيجياً)
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    يقع مجلد <code style="color: var(--gold); background: rgba(0,0,0,0.4); padding: 2px 8px; border-radius: 4px;">brand_brain/</code> في قلب المتجر، وقد تم بناؤه وتوثيقه ليغطي كافة جوانب التسويق وصناعة الإعلانات:
+                </p>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>المجلد (Module)</th>
+                                <th>المحتويات والملفات الأساسية</th>
+                                <th>فائدة المجلد للتيم الجديد</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-gold">01_The_Brand</td>
+                                <td>الهوية، التموضع، المنتجات، المتجر، قواعد الادعاءات والمحظورات، المفردات البصرية.</td>
+                                <td>المرجع الأساسي لكتّاب المحتوى والمصممين لمعرفة ما يُقال وما يُحظر تماماً.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">02_The_Customer</td>
+                                <td>مراجعات العملاء، تعليقات الإعلانات، السمعة، ردود المنتديات، دراسات ما بعد الشراء.</td>
+                                <td>فهم مخاوف العميلة الحقيقية (الرائحة، الخياطة، الأمان) لاستخدامها في الإعلانات.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">03_Personas</td>
+                                <td>ملفات شخصيات العميلات، نبرة العميل (VOC)، خريطة الرحلة، الكلمات الممنوعة (Anti-Language).</td>
+                                <td>استهداف دقيق بدون استخدام كلمات تبتذل البراند مثل "تقليد/كوبي ون".</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">04_The_Account</td>
+                                <td>هيكلة الصرف (300 ر.س/يوم)، مستهدفات CPA و ROAS، مكافحة التشبع الإعلاني، التقويم.</td>
+                                <td>دليل ميديا بايير لتوزيع الميزانيات بدقة متناهية بين المنصات.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">05_The_Competition</td>
+                                <td>قائمة المنافسين المرصودين (سمايا، برانداتي)، مكتبات إعلاناتهم النشطة، لغة عملائهم.</td>
+                                <td>متابعة السوق والتفوق على المنافسين في زوايا الإعلانات والأسعار.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">06_Audits & 07_Loops</td>
+                                <td>نموذج المراجعة الأسبوعية، مصفوفة تدوير الإعلانات كل 14 يوماً، وسجل الفرضيات النشطة.</td>
+                                <td>إطار عمل مستمر لاختبار الفرضيات الإعلانية وضبط الأداء.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">08_Strategy</td>
+                                <td>خارطة الطريق الاستراتيجية، أولويات الـ SKUs، استراتيجية صناع المحتوى والمؤثرين.</td>
+                                <td>تحديد أي الشنط يتم الترويج لها أولاً ومن هم صناع المحتوى المطلوبون.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">09_Ideation & 10_Eval</td>
+                                <td>بنك الأفكار الإعلانية (Customer Language, Trends, Wildcards)، ومصفوفة تقييم الأفكار.</td>
+                                <td>توليد 20-30 فكرة إعلان جديدة كل شهر بدون توقف أو فراغ إبداعي.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">11_Briefing</td>
+                                <td>خطط السبرنت، بريفات التصوير التفصيلية (Creative Briefs)، وتوجيهات اللقطات (Shots).</td>
+                                <td>تسليم بريف جاهز للمصور أو الموديل يتضمن الزوايا والإضاءة والثواني.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">12_Hooks_and_Scripts</td>
+                                <td>مكتبة الـ 35+ خطاف، سيكولوجية أول 3 ثوانٍ، بروفايل صوت البراند، كشف نصوص الذكاء الاصطناعي.</td>
+                                <td>كتابة نصوص إعلانات وفيديوهات UGC بالعامية السعودية ترفع الـ CTR فوراً.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">13_AI_Creative & 14_Iter</td>
+                                <td>برومبتات توليد الصور والفيديو، وتكنيك تبديل الخطافات (Hook Swapping) للإعلانات الرابحة.</td>
+                                <td>إنتاج صور وفيديوهات إعلانية بديلة بأقل تكلفة وجهد.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">15_Quality_Gates</td>
+                                <td>بوابات الجودة الخمسة قبل النشر (فحص الواقعية، الصوت، عدسة البراند، وتجربة القراءة بصوت عالٍ).</td>
+                                <td>منع نشر أي إعلان ضعيف أو غير متوافق مع معايير الفخامة.</td>
+                            </tr>
+                            <tr>
+                                <td class="text-gold">16_Self_Running & 17_Factory</td>
+                                <td>دورات البحث الذاتي، قوالب المصنع، ونموذج المراحل الثلاث للتوسع ومضاعفة العائد.</td>
+                                <td>تكرار وتوسيع نجاح البراند والتوسع لأسواق أخرى لاحقاً.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section 3: Operational SOPs for the Incoming Team -->
+            <div>
+                <h3 style="color: var(--gold-light); font-size: 1.25rem; margin-bottom: 16px; border-right: 4px solid var(--gold); padding-right: 12px;">
+                    3. الأدلة الإجرائية المعيارية للتشغيل الفوري (Standard Operating Procedures - SOPs)
+                </h3>
+
+                <div class="solutions-grid">
+                    <!-- SOP 1 -->
+                    <div class="solution-card" style="border-color: rgba(56, 189, 248, 0.4);">
+                        <span class="sol-badge sol-badge-1">SOP 1 • تقني وإعلاني</span>
+                        <h3>إعداد وتطهير فيد كتالوج ميتا (Meta Sanitized Feed)</h3>
+                        <p><strong>الهدف:</strong> تشغيل إعلانات إنستجرام وفيسبوك والكتالوج الديناميكي وإعادة الاستهداف بدون حظر.</p>
+                        <ul class="sol-steps">
+                            <li><strong>الخطوة 1:</strong> الدخول إلى لوحة تحكم سلة ➔ قنوات البيع ➔ فيد المنتجات (XML/CSV Feed).</li>
+                            <li><strong>الخطوة 2:</strong> إنشاء فيد مخصص لـ Meta؛ استبدال الكلمات المحظورة (Chanel, Dior, LV, Hermes) بأوصاف فخامة (مثال: "حقيبة كتف كلاسيكية مبطنة بجلد الكافيار").</li>
+                            <li><strong>الخطوة 3:</strong> التأكد من أن رابط المنتج (URL Slug) لا يحتوي على اسم الدار العالمية.</li>
+                            <li><strong>الخطوة 4:</strong> ربط الفيد بـ Meta Commerce Manager وتفعيل كتالوج Advantage+.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOP 2 -->
+                    <div class="solution-card" style="border-color: rgba(245, 158, 11, 0.4);">
+                        <span class="sol-badge sol-badge-2">SOP 2 • المحتوى والتصوير</span>
+                        <h3>بروتوكول تصوير الموديل وتوحيد الخلفيات</h3>
+                        <p><strong>الهدف:</strong> رفع ثقة العميلة وتوضيح حجم الحقيبة الحقيقي للقضاء على تردد الدفع.</p>
+                        <ul class="sol-steps">
+                            <li><strong>الخلفية الموحدة:</strong> اعتماد خلفية استوديو ناعمة محايدة (Warm Minimalist Studio) لكافة صور المتجر.</li>
+                            <li><strong>صورة الموديل الإلزامية:</strong> كل منتج يجب أن يحتوي على صورة عارضة ترتدي الشنطة (كتف / يد) مع عباءة أنيقة أو ملابس راقية.</li>
+                            <li><strong>اللقطات الخمسة لكل شنطة:</strong> 1. واجهة أمامية • 2. زاوية جانبية • 3. زووم مقرب للهاردوير والقفل • 4. البطانة الداخلية مع الأغراض • 5. صورة على الموديل.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOP 3 -->
+                    <div class="solution-card" style="border-color: rgba(16, 185, 129, 0.4);">
+                        <span class="sol-badge sol-badge-3">SOP 3 • العلاقات والمؤثرين</span>
+                        <h3>سكريبت التعاقد مع الـ 3 مايكرو إنفلونسرز</h3>
+                        <p><strong>الهدف:</strong> جلب محتوى Unboxing وتجربة واقعية من فتيات سعوديات في الرياض وجدة (25k-70k متابع).</p>
+                        <ul class="sol-steps">
+                            <li><strong>صيغة الرسالة المقترحة (DM):</strong> "مرحباً [الاسم]، نتشرف بك من متجر Clicklock السعودي للحقائب الفاخرة المتقنة 1:1. حابين نهديكِ إحدى حقائبنا التريند بمناسبة إطلاق مجموعتنا الجديدة للمعاينة والتنسيق مع إطلالتك.".</li>
+                            <li><strong>اشتراطات التصوير:</strong> فتح الصندوق الفاخر، استعراض ملمس الجلد الطبيعي، سماع صوت قفلة "الكليك" المميزة، وتوضيح خيار تمارا والتسليم 48 ساعة.</li>
+                            <li><strong>حقوق الإعلان:</strong> الحصول على كود الشراكة الإعلانية (Spark Ads / Whitelist) لترويج الفيديو.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOP 4 -->
+                    <div class="solution-card" style="border-color: rgba(212, 175, 55, 0.4);">
+                        <span class="sol-badge sol-badge-5">SOP 4 • واجهة المتجر والتسعير</span>
+                        <h3>تعديل الهيرو وعروض التوفير في سلة</h3>
+                        <p><strong>الهدف:</strong> كسر تردد الـ 46 عميلة اللاتي توقفن في صفحة الدفع وتحويلهن إلى مبيعات.</p>
+                        <ul class="sol-steps">
+                            <li><strong>الهيرو:</strong> وضع بار أيقونات الضمان الأربعة تحت زر الشراء (معاينة قبل الاستلام • توصيل 48 ساعة • تقسيط تمارا 4 دفعات • تغليف البوتيك الكامل).</li>
+                            <li><strong>شريط الخصم المثبت (Sticky Bar):</strong> تفعيل كود <strong>FIRST10</strong> لخصم 10% أو شحن مجاني لأول طلب.</li>
+                            <li><strong>عرض البكج الترويجي (Bundle):</strong> إنشاء عرض "حقيبة يد + محفظة كروت مطابقة مجاناً" لرفع قيمة السلة وتخفيض المقاومة السعرية.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout callout-success" style="margin-top: 35px;">
+                <div class="callout-title" style="color: var(--accent-green);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 6px;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg> جاهزية الإطلاق والتسليم:</div>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    بهذه الحزمة المتكاملة، أصبح بإمكان أي فريق تسويقي أو ميديا بايير أو مدير متجر جديد استلام إدارة <strong>Clicklock.sa</strong> فوراً وتنفيذ التعديلات الميدانية المباشرة. المنظومة الإعلانية أثبتت جلب الترافيك الرخيص؛ وتطبيق هذه الملفات هو الضمان لتحقيق مبيعات مليونية مستدامة بإذن الله.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>وكالة إيه تو زد للإعلانات (A to Z Advertising Agency)</strong> • شريككم التسويقي</p>
+        <p style="margin-top: 4px;">تقرير رسمي خاص بمتجر Clicklock.sa • المملكة العربية السعودية • أكتوبر 2026</p>
+    </footer>
+
+</div>
+
+<script>
+    function switchTab(index, btn) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        
+        btn.classList.add('active');
+        const target = document.getElementById('tab-' + index);
+        if (target) {
+            target.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
