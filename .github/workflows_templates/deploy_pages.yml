@@ -1,0 +1,49 @@
+name: Deploy Interactive Report to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages Environment
+        run: |
+          mkdir -p _site
+          # Copy main interactive report as index.html
+          if [ -f "Clicklock_Ad_Performance_and_Exit_Strategy_Report.html" ]; then
+            cp "Clicklock_Ad_Performance_and_Exit_Strategy_Report.html" _site/index.html
+          fi
+          # Copy asset files, logos, and PPTX
+          cp -r *.png *.webp *.xlsx *.pdf *.docx *.pptx _site/ 2>/dev/null || true
+          if [ -d "brand_brain" ]; then
+            cp -r brand_brain _site/
+          fi
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,34 @@
+name: Validate Marketing Deliverables Integrity
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify Core Deliverables Exist
+        run: |
+          echo "Checking essential files..."
+          test -f "Clicklock_Ad_Performance_and_Exit_Strategy_Report.html" || { echo "Missing HTML Report"; exit 1; }
+          test -f "Clicklock_Ad_Performance_and_Handover_Strategy.pptx" || { echo "Missing PPTX Deck"; exit 1; }
+          test -f "Tiktok Ads_a2z report sep26_Clicklock.sa_20260901-20260930.xlsx" || { echo "Missing TikTok Excel"; exit 1; }
+          test -f "e06139e2-ffa7-4635-8057-6660fb89bde2_unknown_2026-10-07T01_13_32.57009076Z.xlsx" || { echo "Missing Snap Excel"; exit 1; }
+          test -d "brand_brain" || { echo "Missing Brand Brain directory"; exit 1; }
+          echo "All essential deliverables are present and verified!"

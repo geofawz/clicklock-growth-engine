@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Ad Library Scraper Pro</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="libs/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="mas-popup-app">
+    <!-- Header -->
+    <header class="mas-popup-header">
+      <div class="mas-header-brand">
+        <img src="icons/icon32.png" alt="Logo" class="mas-logo-img">
+        <div>
+          <h1 class="mas-app-title">Meta Ad Library Scraper</h1>
+          <p class="mas-app-subtitle">لوحة كشف إعلانات المنافسين الذكية</p>
+        </div>
+      </div>
+      <div class="mas-status-pill" id="mas-tab-status">
+        <span class="mas-dot" id="mas-status-dot"></span>
+        <span id="mas-status-label">جاري الفحص...</span>
+      </div>
+    </header>
+
+    <!-- Main Controls -->
+    <section class="mas-controls-section">
+      <div class="mas-btn-grid">
+        <button class="mas-btn mas-btn-primary" id="btn-scrape-visible">
+          ⚡ سحب الإعلانات الظاهرة
+        </button>
+        <button class="mas-btn mas-btn-accent" id="btn-autoscroll">
+          🚀 سحب تلقائي (Auto-Scroll)
+        </button>
+        <button class="mas-btn mas-btn-danger" id="btn-stop-scroll" style="display: none;">
+          ⏸️ إيقاف التمرير
+        </button>
+      </div>
+
+      <div class="mas-options-row">
+        <label for="select-scroll-limit" class="mas-option-label">الحد الأقصى:</label>
+        <select class="mas-select" id="select-scroll-limit">
+          <option value="25">25 إعلان</option>
+          <option value="50" selected>50 إعلان</option>
+          <option value="100">100 إعلان</option>
+          <option value="250">250 إعلان</option>
+          <option value="9999">كل الإعلانات (بدون حد)</option>
+        </select>
+        <button class="mas-btn mas-btn-sm mas-btn-outline" id="btn-open-inpage" title="فتح لوحة التحكم المنبثقة داخل صفحة فيسبوك نفسها">
+          🖥️ لوحة الصفحة
+        </button>
+        <button class="mas-btn mas-btn-sm mas-btn-outline" id="btn-clear-data">
+          🗑️ مسح
+        </button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="mas-progress-wrap" id="mas-progress-container" style="display: none;">
+        <div class="mas-progress-bar" id="mas-progress-fill"></div>
+      </div>
+    </section>
+
+    <!-- Stats Counter Bar -->
+    <section class="mas-stats-section">
+      <div class="mas-stat-box">
+        <span class="mas-stat-number" id="stat-total">0</span>
+        <span class="mas-stat-tag">إجمالي الإعلانات</span>
+      </div>
+      <div class="mas-stat-box">
+        <span class="mas-stat-number" id="stat-images">0</span>
+        <span class="mas-stat-tag">صور</span>
+      </div>
+      <div class="mas-stat-box">
+        <span class="mas-stat-number" id="stat-videos">0</span>
+        <span class="mas-stat-tag">فيديو</span>
+      </div>
+      <div class="mas-stat-box">
+        <span class="mas-stat-number" id="stat-carousel">0</span>
+        <span class="mas-stat-tag">كاروسيل</span>
+      </div>
+    </section>
+
+    <!-- Export Section -->
+    <section class="mas-export-section">
+      <div class="mas-export-header">
+        <span>تصدير البيانات المباشر:</span>
+      </div>
+      <div class="mas-export-grid">
+        <button class="mas-btn-export mas-export-excel" id="btn-export-excel">
+          📗 تصدير إكسيل (.xlsx)
+        </button>
+        <button class="mas-btn-export mas-export-csv" id="btn-export-csv">
+          📄 ملف CSV
+        </button>
+        <button class="mas-btn-export mas-export-json" id="btn-export-json">
+          📦 ملف JSON
+        </button>
+        <button class="mas-btn-export mas-export-tsv" id="btn-copy-clipboard">
+          📋 نسخ للجدول
+        </button>
+      </div>
+    </section>
+
+    <!-- Filter & Search Bar -->
+    <section class="mas-search-section">
+      <input type="text" class="mas-search-input" id="input-search" placeholder="ابحث في نص الإعلان، اسم المعلن، الرابط..." />
+      <select class="mas-select" id="select-filter-media">
+        <option value="all">كل الوسائط</option>
+        <option value="Video">فيديو فقط</option>
+        <option value="Image">صور فقط</option>
+        <option value="Carousel">كاروسيل فقط</option>
+      </select>
+    </section>
+
+    <!-- Ad List Preview -->
+    <main class="mas-ads-feed" id="mas-ads-container">
+      <div class="mas-empty-state">
+        <div class="mas-empty-icon">📊</div>
+        <div class="mas-empty-title">لا توجد إعلانات مسحوبة بعد</div>
+        <p class="mas-empty-hint">اضغط على زر <b>"سحب الإعلانات الظاهرة"</b> أو <b>"سحب تلقائي"</b> للبدء فوراً.</p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mas-popup-footer">
+      <span>Meta Ad Library Scraper Pro • Clicklock Saudi Edition</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

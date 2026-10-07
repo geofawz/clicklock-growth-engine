@@ -1,0 +1,48 @@
+# Environment & IDE
+.env
+.env.local
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Agents & AI Skill Cache (Keep product-marketing if needed)
+.claude/
+.agents/skills/
+skills-lock.json
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Node & Build artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Git Temp
+.git_temp_*/
+*.tmp
+*.bak
+*.swp
+
+# Note: Reports, Assets, Brand Brain, Logos and Presentations ARE TRACKED:
+!Clicklock_Ad_Performance_and_Exit_Strategy_Report.html
+!Clicklock_Ad_Performance_and_Handover_Strategy.pptx
+!*.xlsx
+!*.pdf
+!*.docx
+!brand_brain/

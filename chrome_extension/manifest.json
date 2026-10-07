@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Meta Ad Library Scraper Pro | كاشف إعلانات المنافسين",
+  "version": "1.0.1",
+  "description": "Scrape, analyze, and export competitor ads from Facebook / Meta Ad Library to clean Excel (.xlsx), CSV, JSON, with auto-scroll & media downloads.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Meta Ad Library Scraper Pro",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/ads/library/*",
+        "*://facebook.com/ads/library/*",
+        "https://www.facebook.com/ads/library/*",
+        "https://web.facebook.com/ads/library/*",
+        "https://facebook.com/ads/library/*",
+        "https://*.facebook.com/ads/library/*"
+      ],
+      "js": [
+        "libs/xlsx.full.min.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "downloads",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.facebook.com/*",
+    "*://facebook.com/*",
+    "<all_urls>"
+  ]
+}
